@@ -9,9 +9,17 @@ const StyledDiv = styled.div`
     margin: 2rem 20% 2rem 20%;
     padding: 2rem 2rem 2rem 10%;
 `
+const StyledButton = styled.button`
+    width:50%;
+    height:50px;
+    font-size: 1rem;
+    background: #aaa;
+    border: 1px solid black;
+    :hover{
+    background: white;
+    }
 
-
-
+`
 
 
 function useListarTexto() {
@@ -28,9 +36,14 @@ function useListarTexto() {
 
     
     return (
-      <StyledDiv>
+    <div>
+        <StyledButton>Anterior</StyledButton>
+        <StyledButton>Siguiente</StyledButton>
+
+        <StyledDiv>
           {texto.map(item => <div key={item.id}>{item.texto}</div>)}
-      </StyledDiv>
+        </StyledDiv>
+    </div>
     );
 };
 export default useListarTexto;
