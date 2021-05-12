@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 const StyledButton = styled.button`
     width:50%;
     height:50px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     background: #aaa;
     border: 1px solid black;
     :hover{
@@ -32,7 +32,7 @@ function useListarTexto() {
         }
     , []);
     
-
+     
 
     
     return (
@@ -41,7 +41,7 @@ function useListarTexto() {
         <StyledButton>Siguiente</StyledButton>
 
         <StyledDiv>
-          {texto.map(item => <div key={item.id}>{item.texto}</div>)}
+          {texto.map((item , index) => <div key={index}>{item.texto} - {index}</div>)}
         </StyledDiv>
     </div>
     );
