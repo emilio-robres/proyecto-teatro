@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Linea from './Components/Linea.js';
+import CounterApp from './CounterApp.js';
   
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Linea />
-  </React.StrictMode>,
+  <div>
+      <CounterApp />
+      <Linea />
+      
+  </div>
+    
+    
+    
+  ,
   document.getElementById('root')
 );
 
